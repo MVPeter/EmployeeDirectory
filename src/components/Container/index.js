@@ -1,12 +1,15 @@
 import React from 'react';
 import TableHead from '../TableHead';
-import TableBody from '../TableBody';
+// import TableBody from '../TableBody';
 
-export default function index() {
+export default function index(employee) {
+  
   return (
     <div>
-      <TableHead/>
-      <TableBody/>
+      <TableHead
+
+      />
+
     </div>
   )
 }

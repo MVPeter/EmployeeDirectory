@@ -1,7 +1,7 @@
 import React from 'react'
 import TableBody from '../TableBody'
 
-export default function index() {
+export default function index(image, fname, lname, email, phone, location) {
     return (
         <div>
             <table className="table">
@@ -15,7 +15,9 @@ export default function index() {
                     </tr>
                 </thead>
                 <tbody>
-                    <TableBody />
+                    <TableBody
+   
+                    />
                 </tbody>
             </table>
         </div>
