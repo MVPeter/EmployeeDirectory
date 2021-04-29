@@ -7,8 +7,8 @@ export default function index() {
     return (
         <div>
             <div className="form-group">
-              <label for="">Search</label>
-              <input type="text" className="form-control" onChaange={handleOnChange} name="" id="" aria-describedby="helpId" placeholder="Name"></input>
+              <label>Search</label>
+              <input type="text" className="form-control" onChange={handleOnChange} name="" id="" aria-describedby="helpId" placeholder="Name"></input>
               <small id="helpId" className="form-text text-muted"></small>
             </div>
         </div>

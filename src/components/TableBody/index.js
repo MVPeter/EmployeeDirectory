@@ -1,24 +1,31 @@
 import React from 'react'
 
-export default function index(image, fname, lname, email, phone, state) {
+export default function TableBody({
+  image, 
+  fname, 
+  lname, 
+  email, 
+  phone, 
+  state}
+  ) {
   return (
     
       <tr>
-      <td>
-        Image
-          {/* <div className="img-container">
+      <td scope="row">
+          <div className="img-container">
             <img alt={fname} src={image} />
-          </div> */}
+          </div>
         </td>
         <td>
-          Matthew Petersen
+          {fname} {lname}
         </td>
         <td>
-          bob@bob.com
+          {email}
         </td>
         <td>
-          Utah
+          {state}
         </td>
+
 
       </tr>
     

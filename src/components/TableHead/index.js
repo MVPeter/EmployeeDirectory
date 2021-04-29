@@ -1,7 +1,8 @@
 import React from 'react'
 import TableBody from '../TableBody'
 
-export default function index(image, fname, lname, email, phone, location) {
+export default function TableHead({employees}) {
+    console.log(employees)
     return (
         <div>
             <table className="table">
@@ -15,9 +16,14 @@ export default function index(image, fname, lname, email, phone, location) {
                     </tr>
                 </thead>
                 <tbody>
-                    <TableBody
-   
-                    />
+                    {employees.map(employee => (<TableBody
+                        image={employee.picture.thumbnail}
+                        fname={employee.name.first}
+                        lname={employee.name.last}
+                        email={employee.email}
+                        phone={employee.phone}
+                        state={employee.location.state} />))}
+
                 </tbody>
             </table>
         </div>
