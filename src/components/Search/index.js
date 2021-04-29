@@ -14,7 +14,7 @@ export default function index({search}) {
               style={{width: "300px"}}
               type="text" 
               className="form-control" 
-              onSubmit={handleOnChange} 
+              onChange={handleOnChange} 
               name="" id="" 
               aria-describedby="helpId" 
               placeholder="Name"
