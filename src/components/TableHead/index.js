@@ -5,11 +5,12 @@ export default function TableHead({employees}) {
     console.log(employees)
     return (
         <div>
-            <table className="table">
+            <table className="table table-striped mx-5">
                 <thead>
                     <tr>
                         <th>Picture</th>
                         <th>Name</th>
+                        <th>Phone Number</th>
                         <th>Email</th>
                         <th>Location</th>
 

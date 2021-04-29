@@ -25,7 +25,10 @@ function App() {
 
     <div>
       {/* <Header /> */}
-      <Container employees={employees}/>
+      <Container 
+      employees={employees}
+      search={search}
+      />
 
     </div>
 

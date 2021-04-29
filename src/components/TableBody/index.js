@@ -20,6 +20,9 @@ export default function TableBody({
           {fname} {lname}
         </td>
         <td>
+          {phone}
+        </td>
+        <td>
           {email}
         </td>
         <td>

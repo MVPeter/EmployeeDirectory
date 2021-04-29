@@ -4,7 +4,7 @@ import TableBody from '../TableBody';
 import Search from '../Search'
 
 
-function Container({employees}) {
+function Container({employees, search}) {
 
 
 
@@ -15,9 +15,12 @@ function Container({employees}) {
         <p className="lead"></p>
         <hr className="my-2"></hr>
       </div>
-      <Search employees={employees}/>
+      <div clasName="px-2">
+      <Search 
+      employees={employees}
+      search={search}/>
       <TableHead employees={employees}/>
-
+      </div>
 
     </div>
   )
