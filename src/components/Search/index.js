@@ -1,9 +1,13 @@
 import React from 'react'
 
-export default function index({search}) {
-    const handleOnChange = (evt) => {
-        console.log(evt.target.value)
+export default function Search({setFilterUser}) {
+    const handleOnChange = (e) => {
+        setFilterUser(e.target.value)
+        console.log(e.target.value)
+        
     }
+
+
 
 
     return (

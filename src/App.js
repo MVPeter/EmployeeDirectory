@@ -7,7 +7,8 @@ import './App.css';
 
 function App() {
   const [employees, setEmployeesState] = useState([]);
-  const [search, setSearchState] = useState("")
+  const [order, setOrderState] = useState("")
+  const [filterUser, setFilterUser] = useState([]);
 
   useEffect(() => {
     API.get20List()
@@ -27,7 +28,9 @@ function App() {
       {/* <Header /> */}
       <Container 
       employees={employees}
-      search={search}
+      order={order}
+      filterUser={filterUser}
+      setFilterUser={setFilterUser}
       />
 
     </div>

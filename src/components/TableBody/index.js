@@ -11,7 +11,7 @@ export default function TableBody({
   return (
     
       <tr>
-      <td scope="row">
+      <td>
           <div className="img-container">
             <img alt={fname} src={image} />
           </div>

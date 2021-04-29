@@ -1,7 +1,7 @@
 import React from 'react'
 import TableBody from '../TableBody'
 
-export default function TableHead({employees}) {
+export default function TableHead({ employees, filterUser }) {
     console.log(employees)
     return (
         <div>
@@ -17,7 +17,9 @@ export default function TableHead({employees}) {
                     </tr>
                 </thead>
                 <tbody>
-                    {employees.map(employee => (<TableBody
+                    {employees.filter(user =>
+                        user.name.first.toLowerCase().includes(filterUser.toString().toLowerCase())
+                    ).map(employee => (<TableBody
                         image={employee.picture.thumbnail}
                         fname={employee.name.first}
                         lname={employee.name.last}
