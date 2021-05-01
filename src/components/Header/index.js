@@ -9,8 +9,6 @@ export default function index() {
                 <p className="lead"></p>
                 <hr className="my-2"></hr>
                 <Search/>
-
-
             </div>
         </div >
     )

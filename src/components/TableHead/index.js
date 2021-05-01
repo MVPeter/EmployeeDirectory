@@ -1,23 +1,49 @@
 import React from 'react'
 import TableBody from '../TableBody'
 
-export default function TableHead({ employees, filterUser }) {
-    console.log(employees)
+
+export default function TableHead({ employees, filterUser, order, setOrderState }) {
+console.log(order)
+    let buttonOrder = order.button
+    let sOrder = order.sortOrder
+    // let sortEmployees = []
+
+    // const orderEmployees = () =>{
+    //     if (order.sortOrder === true){
+    //         console.log("A")
+    //         sortEmployees = employees.sort((a, b) => a.buttonOrder > b.buttonOrder ? 1 : -1)
+    //     } else {
+    //         console.log("B")
+    //         sortEmployees = employees.sort((a, b) => b.buttonOrder > a.buttonOrder ? 1 : -1)
+    //     }
+    // }
+    // orderEmployees()
+
+    const sortEmployees = !sOrder ?
+        employees.sort((a, b) => a.name.first > b.name.first ? 1 : -1) :
+        employees.sort((a, b) => b.name.first > a.name.first ? 1 : -1)
+    console.log(sortEmployees)
+
+
     return (
         <div>
             <table className="table table-striped mx-5">
                 <thead>
                     <tr>
                         <th>Picture</th>
-                        <th>Name</th>
+                        <th>
+                            <button onClick={() => setOrderState({sortOrder: !order.sortOrder, button: "name.first"})}>Name</button>
+                        </th>
                         <th>Phone Number</th>
                         <th>Email</th>
-                        <th>Location</th>
+                        <th>Location
+                            {/* <button onClick={() => setOrderState({sortOrder: !order.sortOrder, button: "location.state"})}>location</button> */}
+                        </th>
 
                     </tr>
                 </thead>
                 <tbody>
-                    {employees.filter(user =>
+                    {sortEmployees.filter(user =>
                         user.name.first.toLowerCase().includes(filterUser.toString().toLowerCase())
                     ).map(employee => (<TableBody
                         image={employee.picture.thumbnail}

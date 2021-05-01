@@ -16,16 +16,16 @@ export default function TableBody({
             <img alt={fname} src={image} />
           </div>
         </td>
-        <td>
+        <td key={'fullname'}>
           {fname} {lname}
         </td>
-        <td>
+        <td key={'phone'}>
           {phone}
         </td>
-        <td>
+        <td key={'email'}>
           {email}
         </td>
-        <td>
+        <td key={'state'}>
           {state}
         </td>
 

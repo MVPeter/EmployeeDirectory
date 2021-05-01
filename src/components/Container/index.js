@@ -4,7 +4,7 @@ import TableHead from '../TableHead';
 import Search from '../Search'
 
 
-function Container({employees, setFilterUser, order, filterUser}) {
+function Container({employees, setFilterUser, order, setOrderState, filterUser}) {
 
 
 
@@ -18,10 +18,12 @@ function Container({employees, setFilterUser, order, filterUser}) {
       <div clasName="px-2">
       <Search 
       employees={employees}
-      order={order}
       setFilterUser={setFilterUser}
       />
       <TableHead 
+      order={order}
+      setOrderState={setOrderState}
+      setFilterUser={setFilterUser}
       employees={employees}
       filterUser={filterUser}/>
       </div>
