@@ -1,6 +1,8 @@
  # Employee Directory
   ---
-  * [GitHub Repository](https://github.com/MVPeter/EmployeeDirectory)
+* [GitHub Repository](https://github.com/MVPeter/EmployeeDirectory)
+
+* [Deployed Code](https://mvpeter.github.io/EmployeeDirectory/)
 
   ![License: MIT](https://img.shields.io/badge/License-MIT-informational "License Badge")
       
