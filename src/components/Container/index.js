@@ -1,10 +1,7 @@
 import React from 'react';
 import TableHead from '../TableHead';
-// import TableBody from '../TableBody';
-import Search from '../Search'
 
-
-function Container({employees, setFilterUser, order, setOrderState, filterUser}) {
+function Container({employees, setFilterUser, order, setOrderState, filterUser, isBusy}) {
 
 
 
@@ -16,16 +13,15 @@ function Container({employees, setFilterUser, order, setOrderState, filterUser})
         <hr className="my-2"></hr>
       </div>
       <div clasName="px-2">
-      <Search 
-      employees={employees}
-      setFilterUser={setFilterUser}
-      />
+
       <TableHead 
       order={order}
       setOrderState={setOrderState}
       setFilterUser={setFilterUser}
       employees={employees}
-      filterUser={filterUser}/>
+      filterUser={filterUser}
+      isBusy={isBusy}
+      />
       </div>
 
     </div>

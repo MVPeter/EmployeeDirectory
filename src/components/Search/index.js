@@ -1,20 +1,18 @@
 import React from 'react'
 
-export default function Search({setFilterUser}) {
+export default function Search({filter, setFilterUser}) {
     const handleOnChange = (e) => {
         setFilterUser(e.target.value)
         console.log(e.target.value)
         
     }
 
-
-
-
     return (
         <div>
             <div className="form-group mx-5">
               <label>Search</label>
               <input 
+              value={filter || ''}
               style={{width: "300px"}}
               type="text" 
               className="form-control" 
