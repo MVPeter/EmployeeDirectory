@@ -19,7 +19,9 @@
   
   ## Discription
 
-  This project is an example of using an API to get a list of employees and using React to render a table of the information.  You can search for an employee's name and sort by name. 
+  This project is an example of using an API to get a list of employees and using React to render a table of the information.  You can search for any field.
+
+  I use react-table to render the table, filter, and sort.
 
   ![ScreenShot](./screenshot/screenshot.png)
 
@@ -29,6 +31,8 @@
 
   npx create-react-app
   npm install 
+
+  uses:  Axios, bootstrap, gh-pages, react, react-dom, react-table.
 
   ---
   
