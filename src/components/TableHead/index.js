@@ -2,6 +2,7 @@ import React from 'react'
 // import TableBody from '../TableBody'
 import BasicTable from '../TableHead/BasicTable';
 import SortingTable from '../TableHead/SortingTable';
+import FilteringTable from '../TableHead/FilteringTable';
 
 
 export default function TableHead({ employees, filterUser, order, setOrderState, isBusy }) {
@@ -33,7 +34,7 @@ export default function TableHead({ employees, filterUser, order, setOrderState,
             {isBusy ? (
            <h2> loading... </h2>
             ) : (
-                <SortingTable
+                <FilteringTable
                 employees={employees}
             />
             )}
