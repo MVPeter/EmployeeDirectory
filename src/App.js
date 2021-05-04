@@ -17,9 +17,6 @@ function App() {
       ).catch(err => console.log(err));
   }, []);
 
-  const handleSortFunction = () => setOrderState(!order)
-  
-
   console.log("employees: ")
   console.log(employees);
 
@@ -30,11 +27,6 @@ function App() {
       
       <Container 
       employees={employees}
-      order={order}
-      setOrderState={setOrderState}
-      handleSortFunction={handleSortFunction}
-      filterUser={filterUser}
-      setFilterUser={setFilterUser}
       isBusy={isBusy}
       />
        
