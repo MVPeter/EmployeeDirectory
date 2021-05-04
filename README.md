@@ -19,7 +19,7 @@
   
   ## Discription
 
-  This project is an example of using an API to get a list of employees and using React to render a table of the information.  You can search for any field.
+  This project is an example of using an API to get a list of employees and using React to render a table of the information.  You can search for any field and sort by any column.
 
   I use react-table to render the table, filter, and sort.
 
