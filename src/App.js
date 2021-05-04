@@ -7,12 +7,14 @@ function App() {
   const [employees, setEmployeesState] = useState([]);
   const [order, setOrderState] = useState({sortOrder: false, button:""});
   const [filterUser, setFilterUser] = useState([]);
+  const [isBusy, setBusy] = useState(true);
 
   useEffect(() => {
     API.get20List()
       .then(res => {
         console.log(res.data)
         setEmployeesState(res.data.results)
+        setBusy(false)
       }
       ).catch(err => console.log(err));
   }, []);
@@ -27,6 +29,7 @@ function App() {
 
     <div>
       
+      
       <Container 
       employees={employees}
       order={order}
@@ -34,8 +37,9 @@ function App() {
       handleSortFunction={handleSortFunction}
       filterUser={filterUser}
       setFilterUser={setFilterUser}
+      isBusy={isBusy}
       />
-
+       
     </div>
 
   );

@@ -1,10 +1,12 @@
 import React from 'react';
 import TableHead from '../TableHead';
+
 // import TableBody from '../TableBody';
 import Search from '../Search'
+// import BasicTable from '../TableHead/BasicTable';
 
 
-function Container({employees, setFilterUser, order, setOrderState, filterUser}) {
+function Container({employees, setFilterUser, order, setOrderState, filterUser, isBusy}) {
 
 
 
@@ -20,12 +22,15 @@ function Container({employees, setFilterUser, order, setOrderState, filterUser})
       employees={employees}
       setFilterUser={setFilterUser}
       />
+
       <TableHead 
       order={order}
       setOrderState={setOrderState}
       setFilterUser={setFilterUser}
       employees={employees}
-      filterUser={filterUser}/>
+      filterUser={filterUser}
+      isBusy={isBusy}
+      />
       </div>
 
     </div>

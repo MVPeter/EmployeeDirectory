@@ -1,11 +1,21 @@
 export const Columns = [
     {
         Header: 'Picture',
-        accessor: 'picture'
+        accessor: 'picture.thumbnail',
+        maxWidth:70,
+        minWidth:70,
+        Cell: ({ cell: {value }}) => (
+            <img src={value} width={60} alt={""}
+            />)
+            
     },
     {
-        Header: 'Name',
-        accessor: 'name'
+        Header: 'First Name',
+        accessor: 'name.first'
+    },
+    {
+        Header: 'Last Name',
+        accessor: 'name.last'
     },
     {
         Header: 'Phone Number',
@@ -17,6 +27,6 @@ export const Columns = [
     },
     {
         Header: 'State',
-        accesor: 'state'
+        accessor: 'location.state'
     }
 ]
