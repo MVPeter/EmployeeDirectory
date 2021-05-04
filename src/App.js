@@ -5,8 +5,6 @@ import './App.css';
 
 function App() {
   const [employees, setEmployeesState] = useState([]);
-  const [order, setOrderState] = useState({sortOrder: false, button:""});
-  const [filterUser, setFilterUser] = useState([]);
   const [isBusy, setBusy] = useState(true);
 
   useEffect(() => {

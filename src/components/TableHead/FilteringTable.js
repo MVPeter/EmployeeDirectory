@@ -2,24 +2,13 @@ import React, { useMemo} from 'react'
 import { useTable, useSortBy, useGlobalFilter } from 'react-table'
 import GlobalFilter from '../TableHead/GlobalFilter';
 import { Columns } from './columns'
-
 import './table.css'
-
-
 
 export default function FilteringTable(employees) {
     const columns = useMemo(() => Columns, [])
     const data = useMemo(() => employees, [])
     console.log("data:")
     console.log(data.employees)
-
-    // const tableInstance = useTable({
-    //     columns,
-    //     data: data.employees,
-
-    // });
-
-    // console.log(tableInstance)
 
     const {
         getTableProps,
